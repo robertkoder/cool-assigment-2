@@ -156,8 +156,22 @@ Use array methods to do the following:
  Return the resulting array.
 ******************************************************************************/
 
-export function marvelEditor() {
+export function marvelEditor(array) {
   //your code here
+  array.shift()
+
+  const drStrangeIndex = array.indexOf("Doctor Strange")
+  if (array[drStrangeIndex] === "Doctor Strange") {
+    array[drStrangeIndex] = "Skrull"
+  }
+
+  const thorIndex = array.indexOf("Thor")
+  const hulkIndex = array.indexOf("Hulk")
+  if (array[thorIndex] === "Thor" && array[hulkIndex] === "Hulk") {
+    array.splice(thorIndex, 2, "Captain America")
+  }
+
+  return array.join("💪")
 }
 
 /******************************************************************************
