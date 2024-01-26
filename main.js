@@ -201,8 +201,17 @@ Return "😎Primitive values only😎"
 
 ******************************************************************************/
 
-export function coolMaker() {
+export function coolMaker(cool) {
   //your code here
+  if (typeof cool === "string") {
+    return `😎${cool}😎`
+  } else if (typeof cool === "number")  {
+    return `😎${cool * 2}😎`
+  } else if (typeof cool === "boolean") {
+    return cool ? "😎Yeah😎" : "😎Chill😎"
+  } else {
+    return "😎Primitive values only😎"
+  }
 }
 
 /******************************************************************************
