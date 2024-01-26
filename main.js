@@ -78,8 +78,19 @@ The function should return:
 
 ******************************************************************************/
 
-export const greeter = () => {
+export const greeter = (name, hour) => {
   //your code here
+  if (hour < 0 || hour > 23) {
+    return "Invalid time"
+  } else if (hour >= 0 && hour <= 5) {
+    return `Good night ${name}`
+  } else if (hour >= 6 && hour <= 11) {
+    return `Good morning ${name}`
+  } else if (hour >= 12 && hour <= 17) {
+    return `Good day ${name}`
+  } else {
+    return `Good evening ${name}`
+  }
 };
 
 /******************************************************************************
